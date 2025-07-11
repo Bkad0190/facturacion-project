@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #ebe5e561;
+}
+
+input[type="text"], input[type="password"]{
+    outline: none;
+    padding: 15px;
+    display: block;
+    width: 200px;
+    border-radius: 3px;
+    border: 1px solid #1f0303;
+    margin: 15px auto;
+}
+
+input[type="date"],input[type="time"],input[type="number"] {
+    outline: none;
+    padding: 15px;
+    display: block;
+    width: 100px;
+    border-radius: 3px;
+    border: 1px solid #1f0303;
+    margin: 15px auto;
+}
+
+select{
+  outline: none;
+  padding: 15px;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #1f0303;
+  margin: 15px auto;
+}
+
+
+
+/******************************************************************************************************************/
+/***************************************************BOTONES********************************************************/
+/******************************************************************************************************************/
+input[type="submit"] {
+    color: #fff;
+    padding: 10px;
+    background: #0098cb;
+    display: block;
+    width: 280px;
+    border-radius: 3px;
+    border: 0;
+    margin: 20px auto;
+    margin-top: 0;
+    cursor: pointer;
+}

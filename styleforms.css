@@ -1,0 +1,265 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Fondo empresarial claro */
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logoindex img {
+    height: 50px; /* Ajusta según el tamaño de tu logo */
+    margin-right: 15px;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.8em;
+    color: #0056b3; /* Un azul corporativo */
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 900px; /* Ancho máximo similar al de la imagen */
+    margin: 20px auto; /* Centrar */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Formulario */
+.invoice-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Grupos de Formulario (para etiquetas e inputs) */
+.form-group {
+    display: flex;
+    align-items: center; /* Alinea verticalmente etiqueta y input */
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    flex-basis: 150px; /* Ancho fijo para las etiquetas para alinearlas */
+    text-align: right;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input {
+    flex-grow: 1; /* Permite que el input ocupe el espacio restante */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+/* Campos de cabecera (Número, Fecha, Cliente) */
+.form-section.header-fields {
+    display: grid; /* Usamos grid para organizar estos 3 campos */
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    gap: 15px; /* Espacio entre los grupos */
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .form-section.header-fields {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+    }
+    .form-section.header-fields .form-group {
+        flex-direction: column; /* Cambia a columna para que la etiqueta esté arriba */
+        align-items: flex-start;
+    }
+    .form-section.header-fields .form-group label {
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 5px;
+        flex-basis: auto;
+    }
+}
+
+
+/* Separador */
+.separator {
+    border: 0;
+    height: 1px;
+    background-color: #eee;
+    margin: 25px 0;
+}
+
+h3 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* Estilos de Tabla de Productos */
+.products-table-container {
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es muy ancha */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina espacios entre celdas */
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+table thead th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+    color: #666;
+}
+
+table tbody td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top; /* Alinea el contenido de la celda arriba */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Rayas para facilitar la lectura */
+}
+
+/* Estilos para los inputs dentro de la tabla */
+table .input-small {
+    width: 90%; /* Ancho relativo para inputs pequeños */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+table .input-medium {
+    width: 95%; /* Ancho relativo para descripción */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+table .input-xsmall {
+    width: 70%; /* Ancho relativo para cantidad */
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Botón Borrar dentro de la tabla */
+.btn-delete {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Campo Total Factura (al final) */
+.form-section.total-field {
+    display: flex;
+    justify-content: flex-end; /* Alinea a la derecha */
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.form-section.total-field label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 15px;
+    color: #0056b3;
+}
+
+.form-section.total-field .input {
+    width: 150px; /* Ancho fijo para el campo total */
+    text-align: right; /* Alinea el texto a la derecha */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Botón de Guardar */
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: #007bff; /* Azul primario */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes de PHP */
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+.mensaje-advertencia {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilos para el select (si lo usas para el cliente) */
+select.input {
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.6-6.4H18.9c-5%200-9.6%202-13.6%206.4-4%204-6.4%209.6-6.4%2016.1%200%206.5%202.4%2012.1%206.4%2016.1l133%20133c4%204%209.6%206.4%2016.1%206.4s12.1-2.4%2016.1-6.4l133-133c4-4%206.4-9.6%206.4-16.1-.1-6.5-2.5-12.1-6.5-16.1z%22%2F%3E%3C%2Fsvg%3E'); /* Flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+    padding-right: 30px; /* Espacio para la flecha */
+}

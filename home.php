@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Interfaz de Facturación</title>
-    <link rel="stylesheet" href="css/styleforms.css"> </head>
+    <link rel="stylesheet" href="styleforms.css"> </head>
   <body>
     <header>
       <h1 class="page-title">Interfaz Facturación</h1> </header>
